@@ -1,10 +1,12 @@
 var express = require("express");
+var cors = require('cors');
 var app = express();
 var path = require('path');
 var bodyParser = require("body-parser");
 //var cookieParser = require("cookie-parser");
 
 //initialize
+app.use(cors());
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
